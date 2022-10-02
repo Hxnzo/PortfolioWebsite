@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/hanzalahpatel.com/static/css/main.d4eee6a7.css",
-    "main.js": "/hanzalahpatel.com/static/js/main.bd04d349.js",
-    "static/media/H2Z2.jpg": "/hanzalahpatel.com/static/media/H2Z2.996f7f3f19d6457a8777.jpg",
-    "static/media/CBIR.jpg": "/hanzalahpatel.com/static/media/CBIR.de8b1b6fdce8ea9a35c0.jpg",
-    "static/media/React.png": "/hanzalahpatel.com/static/media/React.8a6fc0a24a800d1e0f4a.png",
-    "static/media/bitmoji2.jpg": "/hanzalahpatel.com/static/media/bitmoji2.f4da2bc89944f6c9b167.jpg",
-    "static/media/Resume.pdf": "/hanzalahpatel.com/static/media/Resume.bbb728c9d704feac3965.pdf",
-    "static/media/Python.png": "/hanzalahpatel.com/static/media/Python.52d7bb207f9868b90e39.png",
-    "static/media/Java.png": "/hanzalahpatel.com/static/media/Java.0e2f9072ed023a2f8ea2.png",
-    "static/media/SCSS.png": "/hanzalahpatel.com/static/media/SCSS.4f6d501b7b0af3eef7e2.png",
-    "static/media/Django.png": "/hanzalahpatel.com/static/media/Django.a5aaa412df3c52f5f6bf.png",
-    "static/media/CSS3.png": "/hanzalahpatel.com/static/media/CSS3.84de5dab5fab27f4161c.png",
-    "static/media/HTML.png": "/hanzalahpatel.com/static/media/HTML.3b73196b39d93015d25f.png",
-    "static/media/Javascript.png": "/hanzalahpatel.com/static/media/Javascript.266bd9fb2663dcc057b4.png",
-    "index.html": "/hanzalahpatel.com/index.html",
-    "main.d4eee6a7.css.map": "/hanzalahpatel.com/static/css/main.d4eee6a7.css.map",
-    "main.bd04d349.js.map": "/hanzalahpatel.com/static/js/main.bd04d349.js.map"
+    "main.css": "/static/css/main.d4eee6a7.css",
+    "main.js": "/static/js/main.efb422fd.js",
+    "static/media/H2Z2.jpg": "/static/media/H2Z2.996f7f3f19d6457a8777.jpg",
+    "static/media/CBIR.jpg": "/static/media/CBIR.de8b1b6fdce8ea9a35c0.jpg",
+    "static/media/React.png": "/static/media/React.8a6fc0a24a800d1e0f4a.png",
+    "static/media/bitmoji2.jpg": "/static/media/bitmoji2.f4da2bc89944f6c9b167.jpg",
+    "static/media/Resume.pdf": "/static/media/Resume.bbb728c9d704feac3965.pdf",
+    "static/media/Python.png": "/static/media/Python.52d7bb207f9868b90e39.png",
+    "static/media/Java.png": "/static/media/Java.0e2f9072ed023a2f8ea2.png",
+    "static/media/SCSS.png": "/static/media/SCSS.4f6d501b7b0af3eef7e2.png",
+    "static/media/Django.png": "/static/media/Django.a5aaa412df3c52f5f6bf.png",
+    "static/media/CSS3.png": "/static/media/CSS3.84de5dab5fab27f4161c.png",
+    "static/media/HTML.png": "/static/media/HTML.3b73196b39d93015d25f.png",
+    "static/media/Javascript.png": "/static/media/Javascript.266bd9fb2663dcc057b4.png",
+    "index.html": "/index.html",
+    "main.d4eee6a7.css.map": "/static/css/main.d4eee6a7.css.map",
+    "main.efb422fd.js.map": "/static/js/main.efb422fd.js.map"
   },
   "entrypoints": [
     "static/css/main.d4eee6a7.css",
-    "static/js/main.bd04d349.js"
+    "static/js/main.efb422fd.js"
   ]
 }
