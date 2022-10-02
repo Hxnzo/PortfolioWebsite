@@ -6,7 +6,7 @@ import {AiOutlineGithub} from 'react-icons/ai'
 const Projects = () => {
     return (
         <div className='bg-black pb-10 px-10 pt-[50px]'  name='projects'>
-            <div className='m-auto text-[50px] text-center overflow-hidden before:h-[1px] after:h-[1px] text-white
+            <div className='m-auto text-[50px] text-center overflow-hidden before:h-[1px] after:h-[1px] text-white border-b sm:border-none pb-5
             sm:after:bg-white sm:after:inline-block sm:after:align-middle sm:after:w-1/6 sm:before:bg-white sm:before:inline-block sm:before:align-middle sm:before:w-1/6 sm:before:right-2 sm:after:left-2 sm:p-4'
             >
                 <h1 className='inline'>  Projects  </h1> 
@@ -31,7 +31,7 @@ const Projects = () => {
                         <div className='font-bold text-sm text-[#00FFB9] mb-2'>ReactJS, Redux, ExpressJS, MySQL, React-Router, CSS3</div>
                                                 
                         <div className='items-center text-sm pt-2'>
-                            <a href="https://github.com/Hxnzo/Online_Grocery_Store">
+                            <a href="https://github.com/Hxnzo/Online_Grocery_Store" target="_blank" rel="noreferrer">
                                 <AiOutlineGithub size={ 35 } className='text-black' />
                             </a>
                         </div>
@@ -58,7 +58,7 @@ const Projects = () => {
                         <div className='font-bold text-sm text-[#00FFB9] mb-2'>Python, Pillow, Redux, VS-Code</div>
                                                 
                         <div className='items-center text-sm pt-2'>
-                            <a href="https://github.com/Hxnzo/Content-Based-Image-Retrieval">
+                            <a href="https://github.com/Hxnzo/Content-Based-Image-Retrieval" target="_blank" rel="noreferrer">
                                 <AiOutlineGithub size={ 35 } className='text-black' />
                             </a>
                         </div>

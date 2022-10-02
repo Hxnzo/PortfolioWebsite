@@ -12,9 +12,9 @@ const NavBar = () => {
 
     return (
         //#4B4E53
-        <nav className='bg-[black] px-10 py-2.5 fixed w-full'>
-            <div className='flex justify-between items-center max-w-[1240px] mx-auto'>
-                <h1 className='order-2 md:order-1 flex md:items-center md:self-center text-3xl font-bold text-[#00FFB9] pl-20 md:pl-0 cursor-pointer'>
+        <nav className='bg-[black] sm:px-5 md:px-10 px-2 py-2.5 fixed w-full'>
+            <div className='flex justify-between items-center max-w-[1240px] sm:mx-auto mx-0'>
+                <h1 className='order-2 md:order-1 flex md:items-center md:self-center text-3xl font-bold text-[#00FFB9] pl-[35px] md:px-[91px] md:pl-0 cursor-pointer'>
                     <Link to='home' activeClass='active' smooth={true} spy={true} offset={-50} duration={500}>HP</Link>
                 </h1>
 
@@ -39,7 +39,7 @@ const NavBar = () => {
                 </div>
 
                 <div className='flex order-2 p-2'>
-                    <button type="button" className='text-black bg-[#00FFB9] hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-[#00FFB9] font-bold rounded-lg text-sm sm:px-5 sm:py-2.5 px-1 py-0.5'>
+                    <button type="button" className='text-black bg-[#00FFB9] hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-[#00FFB9] font-bold rounded-lg text-[10px] px-2.5 py-2.5 sm:text-sm sm:px-5 sm:py-2.5'>
                         <a href={pdf} target="_blank" rel="noreferrer">Resume</a>
                     </button>
                 </div>
