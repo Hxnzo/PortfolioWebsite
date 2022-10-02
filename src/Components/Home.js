@@ -5,7 +5,7 @@ import {AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail} from 'react-icons/ai'
 const Home = () => {
     return (
         <div className='pt-20' name='home'>
-            <div className='justify-center my-[-10px] mx-auto md:w-screen h-screen text-center flex-col bg-black grid md:grid-cols-2 md:grid-rows-3 p-10'>
+            <div className='justify-center my-[-10px] mx-auto md:w-screen h-screen text-center flex-col bg-black grid md:grid-cols-2 md:grid-rows-2 p-10'>
                 {/* <div className='justify-center m-[15px] max-w-[1240px] mx-auto bg-black text-white rounded-lg  grid md:grid-cols-2 md:grid-rows-2 p-10'> */}
                 
                     <div className='md:row-span-2 flex flex-col justify-center 2xl:ml-[40%] xl:ml-[30%] lg:ml-0'>

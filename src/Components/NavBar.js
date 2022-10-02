@@ -39,7 +39,7 @@ const NavBar = () => {
                 </div>
 
                 <div className='flex order-2 p-2'>
-                    <button type="button" className='text-black bg-[#00FFB9] hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-[#00FFB9] font-bold rounded-lg text-sm md:px-5 md:py-2.5'>
+                    <button type="button" className='text-black bg-[#00FFB9] hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-[#00FFB9] font-bold rounded-lg text-sm sm:px-5 sm:py-2.5 px-1 py-0.5'>
                         <a href={pdf} target="_blank" rel="noreferrer">Resume</a>
                     </button>
                 </div>
