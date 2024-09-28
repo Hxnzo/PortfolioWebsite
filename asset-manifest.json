@@ -1,25 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.39253d34.css",
-    "main.js": "/static/js/main.e729b670.js",
+    "main.css": "/static/css/main.ee86bff4.css",
+    "main.js": "/static/js/main.140c028e.js",
     "static/media/H2Z2.jpg": "/static/media/H2Z2.996f7f3f19d6457a8777.jpg",
     "static/media/CBIR.jpg": "/static/media/CBIR.de8b1b6fdce8ea9a35c0.jpg",
+    "static/media/Kotlin.png": "/static/media/Kotlin.0423c015c2eeeab403e7.png",
     "static/media/React.png": "/static/media/React.8a6fc0a24a800d1e0f4a.png",
-    "static/media/bitmoji2.jpg": "/static/media/bitmoji2.f4da2bc89944f6c9b167.jpg",
-    "static/media/Resume.pdf": "/static/media/Resume.bbb728c9d704feac3965.pdf",
+    "static/media/Resume.pdf": "/static/media/Resume.c07643a0554d36ff982f.pdf",
+    "static/media/Azure.png": "/static/media/Azure.dad1ca25d0571f9a4ace.png",
     "static/media/Python.png": "/static/media/Python.52d7bb207f9868b90e39.png",
+    "static/media/C.png": "/static/media/C.10aae7b4e081a8873732.png",
+    "static/media/CSharp.png": "/static/media/CSharp.dff7dbaae74a7bcdf75d.png",
+    "static/media/Kubernetes.png": "/static/media/Kubernetes.b33a40559763c9931718.png",
+    "static/media/Express.png": "/static/media/Express.239ca8ab2e60ae2b0df8.png",
     "static/media/Java.png": "/static/media/Java.0e2f9072ed023a2f8ea2.png",
-    "static/media/SCSS.png": "/static/media/SCSS.4f6d501b7b0af3eef7e2.png",
+    "static/media/CNL.png": "/static/media/CNL.55337dc8c947af2d3b34.png",
+    "static/media/ASP.png": "/static/media/ASP.4b9633ecb2a9a372ffa4.png",
+    "static/media/Me.jpeg": "/static/media/Me.0c07b7b0b8fbe9bcd59d.jpeg",
+    "static/media/OTU.png": "/static/media/OTU.f9e57d9b6ea370f4adba.png",
     "static/media/Django.png": "/static/media/Django.a5aaa412df3c52f5f6bf.png",
-    "static/media/CSS3.png": "/static/media/CSS3.84de5dab5fab27f4161c.png",
+    "static/media/OPG.png": "/static/media/OPG.0f2ee4895daaea5f343a.png",
     "static/media/HTML.png": "/static/media/HTML.3b73196b39d93015d25f.png",
+    "static/media/C++.png": "/static/media/C++.7b6ed777474f840c9d35.png",
     "static/media/Javascript.png": "/static/media/Javascript.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.39253d34.css.map": "/static/css/main.39253d34.css.map",
-    "main.e729b670.js.map": "/static/js/main.e729b670.js.map"
+    "main.ee86bff4.css.map": "/static/css/main.ee86bff4.css.map",
+    "main.140c028e.js.map": "/static/js/main.140c028e.js.map"
   },
   "entrypoints": [
-    "static/css/main.39253d34.css",
-    "static/js/main.e729b670.js"
+    "static/css/main.ee86bff4.css",
+    "static/js/main.140c028e.js"
   ]
 }
