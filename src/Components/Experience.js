@@ -287,7 +287,7 @@ const Experience = () => {
 
     const experiences = {
         cnl: {
-            company: "Canada Nuclear Laboratories",
+            company: "Canadian Nuclear Laboratories",
             title: "Computer Science Student",
             details: [
                 "Collaborated on the development of an internal machine learning model using Python and SQL to predict work package statuses, partnering with a Senior Data Engineer to create a test model that forecasted timelines.",
