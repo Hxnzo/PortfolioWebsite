@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ee86bff4.css",
-    "main.js": "/static/js/main.140c028e.js",
+    "main.js": "/static/js/main.036d56d8.js",
     "static/media/H2Z2.jpg": "/static/media/H2Z2.996f7f3f19d6457a8777.jpg",
     "static/media/CBIR.jpg": "/static/media/CBIR.de8b1b6fdce8ea9a35c0.jpg",
     "static/media/Kotlin.png": "/static/media/Kotlin.0423c015c2eeeab403e7.png",
@@ -14,7 +14,7 @@
     "static/media/Kubernetes.png": "/static/media/Kubernetes.b33a40559763c9931718.png",
     "static/media/Express.png": "/static/media/Express.239ca8ab2e60ae2b0df8.png",
     "static/media/Java.png": "/static/media/Java.0e2f9072ed023a2f8ea2.png",
-    "static/media/CNL.png": "/static/media/CNL.55337dc8c947af2d3b34.png",
+    "static/media/CNL.png": "/static/media/CNL.3a7929dd1bd745ecc204.png",
     "static/media/ASP.png": "/static/media/ASP.4b9633ecb2a9a372ffa4.png",
     "static/media/Me.jpeg": "/static/media/Me.0c07b7b0b8fbe9bcd59d.jpeg",
     "static/media/OTU.png": "/static/media/OTU.f9e57d9b6ea370f4adba.png",
@@ -25,10 +25,10 @@
     "static/media/Javascript.png": "/static/media/Javascript.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
     "main.ee86bff4.css.map": "/static/css/main.ee86bff4.css.map",
-    "main.140c028e.js.map": "/static/js/main.140c028e.js.map"
+    "main.036d56d8.js.map": "/static/js/main.036d56d8.js.map"
   },
   "entrypoints": [
     "static/css/main.ee86bff4.css",
-    "static/js/main.140c028e.js"
+    "static/js/main.036d56d8.js"
   ]
 }
