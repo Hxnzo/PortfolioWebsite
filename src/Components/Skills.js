@@ -138,7 +138,7 @@ const Skills = () => {
 
             <div className={`p-5 justify-center m-auto max-w-[960px] text-black rounded-lg ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
                 <div className='m-auto p-5 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5'>
-                    <div className='inline p-3 justify-center m-auto bg-white text-black rounded-3xl border-solid border-4 border-[#00FFB9]'>
+                    <div className='inline p-3 justify-center h-[95.25px] sm:h-full w-[82px] sm:w-[108px] m-auto bg-white text-black rounded-3xl border-solid border-4 border-[#00FFB9]'>
                         <img className='sm:w-[80px] w-[50px]' src={htmlPic} alt="/" />
                         <h1 className='flex justify-center text-sm'>HTML5</h1>
                     </div>   
