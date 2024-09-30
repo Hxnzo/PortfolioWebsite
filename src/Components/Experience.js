@@ -280,7 +280,6 @@ import otu from '../Pictures/OTU.png';
 import cnl from '../Pictures/CNL.png';
 
 const Experience = () => {
-    // State to manage which experience is selected
     const [selectedExperience, setSelectedExperience] = useState('cnl');
     const experienceRef = useRef(null); 
     const [isVisible, setIsVisible] = useState(false); 

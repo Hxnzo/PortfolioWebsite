@@ -133,7 +133,7 @@ const Skills = () => {
                 sm:after:bg-white sm:after:inline-block sm:after:align-middle sm:after:w-1/5 sm:before:bg-white sm:before:inline-block sm:before:align-middle sm:before:w-1/5 sm:before:right-2 sm:after:left-2 sm:p-4 
                 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
             >
-                <h1 className='inline'> Skills </h1> 
+                <h1 className='inline'> Skills </h1>  
             </div>
 
             <div className={`p-5 justify-center m-auto max-w-[960px] text-black rounded-lg ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
