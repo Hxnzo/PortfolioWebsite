@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b462cda8.css",
-    "main.js": "/static/js/main.3800b13c.js",
+    "main.js": "/static/js/main.aa1d4759.js",
     "static/media/H2Z2.jpg": "/static/media/H2Z2.996f7f3f19d6457a8777.jpg",
     "static/media/CBIR.jpg": "/static/media/CBIR.de8b1b6fdce8ea9a35c0.jpg",
     "static/media/Kotlin.png": "/static/media/Kotlin.0423c015c2eeeab403e7.png",
@@ -12,11 +12,11 @@
     "static/media/C.png": "/static/media/C.10aae7b4e081a8873732.png",
     "static/media/CSharp.png": "/static/media/CSharp.dff7dbaae74a7bcdf75d.png",
     "static/media/Kubernetes.png": "/static/media/Kubernetes.b33a40559763c9931718.png",
+    "static/media/Me2.jpg": "/static/media/Me2.977125691c99a74396aa.jpg",
     "static/media/Express.png": "/static/media/Express.239ca8ab2e60ae2b0df8.png",
     "static/media/Java.png": "/static/media/Java.0e2f9072ed023a2f8ea2.png",
     "static/media/CNL.png": "/static/media/CNL.3a7929dd1bd745ecc204.png",
     "static/media/ASP.png": "/static/media/ASP.4b9633ecb2a9a372ffa4.png",
-    "static/media/Me.jpeg": "/static/media/Me.0c07b7b0b8fbe9bcd59d.jpeg",
     "static/media/OTU.png": "/static/media/OTU.f9e57d9b6ea370f4adba.png",
     "static/media/Django.png": "/static/media/Django.a5aaa412df3c52f5f6bf.png",
     "static/media/OPG.png": "/static/media/OPG.0f2ee4895daaea5f343a.png",
@@ -25,10 +25,10 @@
     "static/media/Javascript.png": "/static/media/Javascript.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
     "main.b462cda8.css.map": "/static/css/main.b462cda8.css.map",
-    "main.3800b13c.js.map": "/static/js/main.3800b13c.js.map"
+    "main.aa1d4759.js.map": "/static/js/main.aa1d4759.js.map"
   },
   "entrypoints": [
     "static/css/main.b462cda8.css",
-    "static/js/main.3800b13c.js"
+    "static/js/main.aa1d4759.js"
   ]
 }
