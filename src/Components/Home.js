@@ -47,7 +47,7 @@
 
 // export default Home;
 import React from 'react';
-import mePic from '../Pictures/Me.jpeg';
+import mePic from '../Pictures/Me2.jpg';
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail } from 'react-icons/ai';
 
 const Home = () => {

@@ -28,7 +28,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <div ref={contactRef} className='bg-black pb-10 px-10 h-screen sm:pt-[350px] pt-[200px]' name='contacts'>
+        <div ref={contactRef} className='bg-black pb-10 px-10 h-screen sm:pt-[350px] lg:pt-[250px] pt-[200px]' name='contacts'>
             <div className={`m-auto text-[50px] justify-center text-center overflow-hidden before:h-[1px] after:h-[1px] text-white border-b sm:border-none pb-5
             sm:after:bg-white sm:after:inline-block sm:after:align-middle sm:after:w-1/6 sm:before:bg-white sm:before:inline-block sm:before:align-middle sm:before:w-1/6 sm:before:right-2 sm:after:left-2 sm:p-4 
             ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
