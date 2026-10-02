@@ -6,19 +6,20 @@ import NavBar from "./Components/NavBar";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 
-
 const App = () => {
   return (
-    <div className='scroll-smooth overflow-hidden'>
+    <div className="bg-ink">
       <NavBar />
-      <Home />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main>
+        <Home />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
-}
+};
 
 export default App;

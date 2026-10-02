@@ -1,90 +1,98 @@
-// import React from 'react';
-// import bitmoji from '../Pictures/bitmoji2.jpg'
-// import {AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail} from 'react-icons/ai'
-
-// const Home = () => {
-//     return (
-//         <div className='pt-20' name='home'>
-//             <div className='justify-center sm:my-[-10px] my-[-20px] mx-auto md:w-screen h-screen text-center flex-col bg-black grid md:grid-cols-2 md:grid-rows-2 p-10'>
-//                 {/* <div className='justify-center m-[15px] max-w-[1240px] mx-auto bg-black text-white rounded-lg  grid md:grid-cols-2 md:grid-rows-2 p-10'> */}
-                
-//                     <div className='flex flex-col justify-center 2xl:ml-[40%] xl:ml-[30%] lg:ml-0'>
-//                         <img className='sm:w-[250px] w-[200px] mx-auto my-4 rounded-full' src={bitmoji} alt="/Me" /> {/* shadow-xl shadow-[#00FFB9] */}
-//                     </div>
-
-//                     <div className='m-auto p-10 text-white 2xl:mr-[40%] xl:mr-[30%] lg:ml-0'>
-//                         <h1 className='inline sm:text-xl text-md'>Hello, my name is </h1>
-//                         <h1 className='inline-block sm:text-4xl text-xl text-[#00FFB9]'>Hanzalah Patel</h1>
-//                         <h1 className='sm:text-xl text-md'>and I am a <h1 className='inline-block sm:text-4xl text-xl text-[#00FFB9]'>Software developer</h1></h1>
-                        
-//                     </div>
-
-//                     <div className='md:col-span-2 sm:p-10 pb-5'>
-//                         <ul>
-//                             <li className='inline-block py-2 px-5 text-black rounded-lg'>
-//                                 <a href="mailto:hanzalah.patel@ontariotechu.net">
-//                                     <AiOutlineMail size={ 50 } className='text-white' />
-//                                 </a>
-//                             </li>
-//                             <li className='inline-block py-2 px-5 text-black rounded-lg'>
-//                                 <a href="https://github.com/Hxnzo" target="_blank" rel="noreferrer">
-//                                     <AiOutlineGithub size={ 50 } className='text-white' />
-//                                 </a>
-//                             </li>
-//                             <li className='inline-block py-2 px-5 text-black '>
-//                                 <a href="https://www.linkedin.com/in/hanzalah-patel/" target="_blank" rel="noreferrer">
-//                                     <AiOutlineLinkedin size={ 50 } className='text-white' />
-//                                 </a>
-//                             </li>
-//                         </ul>
-//                     </div>
-
-//                 {/* </div> */}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Home;
 import React from 'react';
-import mePic from '../Pictures/Me2.jpg';
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail } from 'react-icons/ai';
+import { HiArrowDown } from 'react-icons/hi';
+import { Link } from 'react-scroll';
+import mePic from '../Pictures/Me2.jpg';
+
+const SOCIALS = [
+  { label: 'Email', href: 'mailto:hanzalah.patel@ontariotechu.net', Icon: AiOutlineMail },
+  { label: 'GitHub', href: 'https://github.com/Hxnzo', Icon: AiOutlineGithub },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hanzalah-patel/', Icon: AiOutlineLinkedin },
+];
 
 const Home = () => {
   return (
-    <div className='w-full h-screen flex justify-center items-center bg-gradient-to-b from-[#0d1d18] to-black' name='home'>
-      <div className='text-center'>
-        <div className='flex flex-col items-center animate-fade-in'>
-          <img className='sm:w-[250px] w-[200px] my-4 rounded-full border-solid border-4 border-[#00FFB9]' src={mePic} alt="Me" />
+    <section id="home" name="home" className="relative overflow-hidden">
+      {/* soft accent glow behind the hero */}
+      <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[120px]" />
+
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col-reverse items-center justify-center gap-12 px-6 pt-24 pb-16 sm:px-8 md:flex-row md:justify-between md:gap-8">
+        <div className="max-w-xl text-center md:text-left">
+          <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.2em] text-accent animate-fade-in motion-reduce:animate-none">
+            Hi, my name is
+          </p>
+          <h1
+            className="font-display text-4xl font-bold text-white animate-fade-in motion-reduce:animate-none sm:text-6xl"
+            style={{ animationDelay: '100ms' }}
+          >
+            Hanzalah Patel
+          </h1>
+          <h2
+            className="mt-2 font-display text-2xl font-semibold text-muted animate-fade-in motion-reduce:animate-none sm:text-4xl"
+            style={{ animationDelay: '200ms' }}
+          >
+            Software Engineer
+          </h2>
+          <p
+            className="mt-5 text-base leading-relaxed text-muted animate-fade-in motion-reduce:animate-none sm:text-lg"
+            style={{ animationDelay: '300ms' }}
+          >
+            Software Engineering graduate who builds full-stack web apps and data-driven tools.
+            Passionate about AI, clean interfaces, and solving real problems with code.
+          </p>
+
+          <div
+            className="mt-8 flex flex-wrap items-center justify-center gap-4 animate-fade-in motion-reduce:animate-none md:justify-start"
+            style={{ animationDelay: '400ms' }}
+          >
+            <Link to="projects" smooth offset={-64} duration={500} className="btn-primary cursor-pointer">
+              View Projects
+            </Link>
+            <Link to="contact" smooth offset={-64} duration={500} className="btn-ghost cursor-pointer">
+              Get in Touch
+            </Link>
+          </div>
+
+          <div
+            className="mt-8 flex items-center justify-center gap-5 animate-fade-in motion-reduce:animate-none md:justify-start"
+            style={{ animationDelay: '500ms' }}
+          >
+            {SOCIALS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel="noreferrer"
+                className="text-muted transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+              >
+                <Icon size={28} />
+              </a>
+            ))}
+          </div>
         </div>
 
-        <div className='text-white p-10 animate-fade-in'>
-          <h1 className='inline sm:text-3xl text-lg'>Hi, my name is </h1>
-          <h1 className='inline sm:text-5xl text-2xl text-[#00FFB9]'>Hanzalah Patel</h1>
-          <h1 className='sm:text-3xl text-sm'>and I am a <span className='inline sm:text-5xl text-lg text-[#00FFB9]'>Software Engineer/Developer</span></h1>
-        </div>
-
-        <div className='mt-10'>
-          <ul className='flex justify-center gap-8'>
-            <li className='hover:scale-125 transition-transform duration-500'>
-              <a href="mailto:hanzalah.patel@ontariotechu.net">
-                <AiOutlineMail size={50} className='text-white bounce-animation' />
-              </a>
-            </li>
-            <li className='hover:scale-125 transition-transform duration-500'>
-              <a href="https://github.com/Hxnzo" target="_blank" rel="noreferrer">
-                <AiOutlineGithub size={50} className='text-white bounce-animation' />
-              </a>
-            </li>
-            <li className='hover:scale-125 transition-transform duration-500'>
-              <a href="https://www.linkedin.com/in/hanzalah-patel/" target="_blank" rel="noreferrer">
-                <AiOutlineLinkedin size={50} className='text-white bounce-animation' />
-              </a>
-            </li>
-          </ul>
+        <div className="relative shrink-0 animate-fade-in motion-reduce:animate-none" style={{ animationDelay: '200ms' }}>
+          <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl" />
+          <img
+            src={mePic}
+            alt="Hanzalah Patel"
+            className="relative h-52 w-52 rounded-full border-2 border-accent/60 object-cover shadow-glow sm:h-64 sm:w-64 md:h-72 md:w-72"
+          />
         </div>
       </div>
-    </div>
+
+      <Link
+        to="about"
+        smooth
+        offset={-64}
+        duration={500}
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 cursor-pointer text-muted transition-colors hover:text-accent md:block"
+        aria-label="Scroll to About"
+      >
+        <HiArrowDown size={24} className="animate-bounce" />
+      </Link>
+    </section>
   );
 };
 

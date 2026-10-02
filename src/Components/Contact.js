@@ -1,66 +1,52 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
+import Section from './Section';
+
+const CONTACTS = [
+  { label: 'GitHub', href: 'https://github.com/Hxnzo', Icon: AiOutlineGithub },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hanzalah-patel/', Icon: AiOutlineLinkedin },
+  { label: 'Phone', href: 'tel:+16476759946', Icon: AiOutlinePhone },
+];
 
 const Contact = () => {
-    const contactRef = useRef(null); // Reference to the Contact section
-    const [isVisible, setIsVisible] = useState(false); // Track visibility
+  return (
+    <>
+      <Section id="contact" eyebrow="What's next" title="Get In Touch" center>
+        <div className="mx-auto max-w-xl">
+          <p className="text-base leading-relaxed text-muted sm:text-lg">
+            I'm currently looking for new grad software engineering opportunities. Whether you have a role in
+            mind, a question, or just want to say hi, my inbox is always open.
+          </p>
 
-    // Use IntersectionObserver to trigger fade-in animations
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true); // Trigger animation when section is visible
-                    observer.unobserve(entry.target); // Stop observing once visible
-                }
-            });
-        }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+          <div className="mt-8">
+            <a href="mailto:hanzalah.patel@ontariotechu.net" className="btn-primary text-base">
+              <AiOutlineMail size={20} />
+              Say Hello
+            </a>
+          </div>
 
-        if (contactRef.current) {
-            observer.observe(contactRef.current); // Observe the 'Contact' section
-        }
-
-        return () => {
-            if (contactRef.current) {
-                observer.unobserve(contactRef.current);
-            }
-        };
-    }, []);
-
-    return (
-        <div ref={contactRef} className='bg-black pb-10 px-10 h-screen sm:pt-[350px] lg:pt-[250px] pt-[200px]' name='contacts'>
-            <div className={`m-auto text-[50px] justify-center text-center overflow-hidden before:h-[1px] after:h-[1px] text-white border-b sm:border-none pb-5
-            sm:after:bg-white sm:after:inline-block sm:after:align-middle sm:after:w-1/6 sm:before:bg-white sm:before:inline-block sm:before:align-middle sm:before:w-1/6 sm:before:right-2 sm:after:left-2 sm:p-4 
-            ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-                <h1 className='inline'> Contact </h1>
-            </div>
-
-            <div className={`m-auto max-w-[750px] bg-black ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-                <div className='m-auto py-20 px-30 lg:p-20 grid smd:grid-cols-4 grid-cols-2'>
-                    <div className='inline-block p-3 sm:p-4 mb-5 md:mb-0 m-auto rounded-full border-solid border-4 border-[#00FFB9]'>
-                        <a href="mailto:hanzalah.patel@ontariotechu.net" className='mx-auto'>
-                            <AiOutlineMail size={60} className='text-white' />
-                        </a>
-                    </div>
-                    <div className='inline-block p-3 sm:p-4 mb-5 md:mb-0 m-auto rounded-full border-solid border-4 border-[#00FFB9]'>
-                        <a href="https://github.com/Hxnzo" className='mx-auto' target="_blank" rel="noreferrer">
-                            <AiOutlineGithub size={60} className='text-white' />
-                        </a>
-                    </div>
-                    <div className='inline-block p-3 sm:p-4 mb-5 md:mb-0 m-auto rounded-full border-solid border-4 border-[#00FFB9]'>
-                        <a href="https://www.linkedin.com/in/hanzalah-patel/" className='mx-auto' target="_blank" rel="noreferrer">
-                            <AiOutlineLinkedin size={60} className='text-white' />
-                        </a>
-                    </div>
-                    <div className='inline-block p-3 sm:p-4 mb-5 md:mb-0 m-auto rounded-full border-solid border-4 border-[#00FFB9]'>
-                        <a href="tel:+16476759946" className='mx-auto'>
-                            <AiOutlinePhone size={60} className='text-white' />
-                        </a>
-                    </div>
-                </div>
-            </div>
+          <div className="mt-10 flex items-center justify-center gap-6">
+            {CONTACTS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel="noreferrer"
+                className="text-muted transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+              >
+                <Icon size={30} />
+              </a>
+            ))}
+          </div>
         </div>
-    );
+      </Section>
+
+      <footer className="border-t border-edge py-6 text-center text-xs text-muted">
+        Designed & built by Hanzalah Patel
+      </footer>
+    </>
+  );
 };
 
 export default Contact;

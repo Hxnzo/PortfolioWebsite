@@ -1,83 +1,109 @@
-import React, {useState} from 'react';
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import { Link } from "react-scroll";
-import pdf from "../Resume.pdf";
+import React, { useEffect, useState } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-scroll';
+import pdf from '../Resume.pdf';
+
+const NAV_LINKS = [
+  { label: 'About', to: 'about' },
+  { label: 'Experience', to: 'experience' },
+  { label: 'Skills', to: 'skills' },
+  { label: 'Projects', to: 'projects' },
+  { label: 'Contact', to: 'contact' },
+];
 
 const NavBar = () => {
-    const [nav,setNav] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const navDropdown = () => {
-        setNav(!nav)
-    }
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-    return (
-        //#4B4E53
-        <nav className='bg-[black] sm:px-5 md:px-10 px-2 py-2.5 fixed w-full z-50'>
-            <div className='flex justify-between items-center max-w-[1240px] sm:mx-auto mx-0'>
-                <h1 className='order-2 md:order-1 flex md:items-center md:self-center text-3xl font-bold text-[#00FFB9] pl-[35px] md:px-[91px] md:pl-0 cursor-pointer'>
-                    <Link to='home' activeClass='active' smooth={true} spy={true} offset={-50} duration={500}>HP</Link>
-                </h1>
+  const closeMenu = () => setMenuOpen(false);
 
-                <div className='hidden justify-between items-center w-full md:flex md:w-auto md:order-2'>
-                    <ul className='flex p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0'>
-                        <li className='py-2 pr-4 pl-3 text-[#00FFB9] md:bg-transparent md:p-0 cursor-pointer hover:underline'>
-                            <Link to='about' activeClass='active' smooth={true} spy={true} offset={-50} duration={500}>About</Link>
-                        </li>
-                        <li className='py-2 pr-4 pl-3 text-[#00FFB9] md:bg-transparent md:p-0 cursor-pointer hover:underline'>
-                            <Link to='experience' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Experience</Link>
-                        </li>
-                        <li className='py-2 pr-4 pl-3 text-[#00FFB9] md:bg-transparent md:p-0 cursor-pointer hover:underline'>
-                            <Link to='skills' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Skills</Link>
-                        </li>
-                        <li className='py-2 pr-4 pl-3 text-[#00FFB9] md:bg-transparent md:p-0 cursor-pointer hover:underline'>
-                            <Link to='projects' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Projects</Link>
-                        </li>
-                        <li className='py-2 pr-4 pl-3 text-[#00FFB9] md:bg-transparent md:p-0 cursor-pointer hover:underline'>
-                            <Link to='contacts' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Contact</Link>
-                        </li>
-                    </ul>
-                </div>
+  return (
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'border-b border-edge bg-ink/85 backdrop-blur-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
+        <Link
+          to="home"
+          smooth
+          duration={500}
+          className="cursor-pointer font-display text-2xl font-bold text-white"
+        >
+          HP<span className="text-accent">.</span>
+        </Link>
 
-                <div className='flex order-2 p-2'>
-                    <a href={pdf} target="_blank" rel="noreferrer">
-                        <button type="button" className='text-black bg-[#00FFB9] hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-[#00FFB9] font-bold rounded-lg text-[10px] px-2.5 py-2.5 sm:text-sm sm:px-5 sm:py-2.5'>
-                            Resume
-                        </button>
-                    </a>
-                </div>
+        <ul className="hidden items-center gap-8 md:flex">
+          {NAV_LINKS.map(({ label, to }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                smooth
+                spy
+                offset={-64}
+                duration={500}
+                activeClass="text-accent"
+                className="cursor-pointer text-sm font-medium text-muted transition-colors duration-200 hover:text-white"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-                <div onClick={navDropdown} className='text-[#00FFB9] block md:hidden cursor-pointer'>
-                    {nav ? <AiOutlineMenu size={ 35 } /> : null}
-                </div>
+        <div className="flex items-center gap-3">
+          <a href={pdf} target="_blank" rel="noreferrer" className="btn-primary hidden !px-4 !py-2 text-sm md:inline-flex">
+            Resume
+          </a>
 
-                <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full text-white bg-black ease-in-out duration-700' : 'fixed left-[-100%]'}> 
-                    <ul className='uppercase p-4'>
-                        <div onClick={navDropdown} className='p-5 text-[#00FFB9] cursor-pointer'>
-                            {!nav ? <AiOutlineClose size={ 35 } /> : null}
-                        </div>
+          <button
+            type="button"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-body transition-colors hover:text-accent md:hidden"
+          >
+            {menuOpen ? <AiOutlineClose size={26} /> : <AiOutlineMenu size={26} />}
+          </button>
+        </div>
+      </div>
 
-                        <li className='p-4 border-b border-[#00FFB9] cursor-pointer hover:underline'>
-                            <Link onClick={navDropdown} to='about' activeClass='active' smooth={true} spy={true} offset={-50} duration={500}>
-                                About
-                            </Link>
-                        </li>
-                        <li className='p-4 border-b border-[#00FFB9] cursor-pointer hover:underline'>
-                            <Link onClick={navDropdown} to='experience' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Experience</Link>
-                        </li>
-                        <li className='p-4 border-b border-[#00FFB9] cursor-pointer hover:underline'>
-                            <Link onClick={navDropdown} to='skills' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Skills</Link>
-                        </li>
-                        <li className='p-4 border-b border-[#00FFB9] cursor-pointer hover:underline'>
-                            <Link onClick={navDropdown} to='projects' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Projects</Link>
-                        </li>
-                        <li className='p-4 cursor-pointer hover:underline'>
-                            <Link onClick={navDropdown} to='contacts' activeClass='active' smooth={true} spy={true} offset={-25} duration={500}>Contact</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden ${
+          menuOpen ? 'max-h-96 border-b border-edge bg-ink/95 backdrop-blur-md' : 'max-h-0'
+        } overflow-hidden transition-all duration-300`}
+      >
+        <ul className="flex flex-col gap-1 px-6 py-4">
+          {NAV_LINKS.map(({ label, to }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                smooth
+                offset={-64}
+                duration={500}
+                onClick={closeMenu}
+                className="block cursor-pointer rounded-lg px-3 py-2.5 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-white"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+          <li className="mt-2">
+            <a href={pdf} target="_blank" rel="noreferrer" onClick={closeMenu} className="btn-primary w-full text-sm">
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;
